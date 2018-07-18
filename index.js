@@ -25,7 +25,8 @@ p.uncommon = 20;
 p.rare = 1250;
 p.garbage = 6;
 
-var delay = 75;
+var delay = 50;
+var sellDelay = 1000;
 var credits = 1000;
 var sellRare = true;
 var inv = {common: 0, uncommon:0, rare: 0, garbage: 0};
@@ -66,7 +67,7 @@ const doFish = () => {
 			setTimeout(() => {
 				sellFish();
 				doFish();
-			}, 3000);
+			}, sellDelay);
 		}
 		return;
 	}
